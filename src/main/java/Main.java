@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SuppressWarnings("serial")
 public class Main extends HttpServlet {
 
-	private static ObjectMapper JSON_MAPPER = new ObjectMapper();
+	public static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
 	private static BattleSnakeHandlers HANDLERS = new BattleSnakeHandlers();
 
@@ -48,7 +48,7 @@ public class Main extends HttpServlet {
 	}
 
 	@SuppressWarnings("unchecked")
-	private Map<String, Object> getRequestObject(HttpServletRequest req) throws IOException {
+	private static Map<String, Object> getRequestObject(HttpServletRequest req) throws IOException {
 		Map<String, Object> requestObject = JSON_MAPPER.readValue(req.getReader(), Map.class);
 		return requestObject;
 	}
