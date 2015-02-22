@@ -10,7 +10,7 @@ public class Snake {
 	public static final String MY_TAUNT = "Doot doot";
 
 	public static Snake ME;
-	public static final Map<String, Snake> SNAKE_MAP = new HashMap<>();
+	public static final Map<String, Snake> SNAKE_MAP = new HashMap<String, Snake>();
 	
 	private String name, color, head, taunt;
 	public ArrayList<ArrayList<Integer>> body;
